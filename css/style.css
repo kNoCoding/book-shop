@@ -41,3 +41,18 @@ button {
     background-color:transparent;
     color: rgb(43, 168, 240);
 }
+
+.user-msg {
+	position: fixed;
+	bottom: -100px;
+	right: 10px;
+
+	background-color: #111;
+    color: white;
+	padding: 10px;
+    transition: bottom 0.5s;
+}
+
+.user-msg.open {
+	bottom: 10px;
+}

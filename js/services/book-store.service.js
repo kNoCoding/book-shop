@@ -26,9 +26,17 @@ function addBook(title, price) {
     return book
 }
 
-function getBookById() { }
+function getBookById(bookId) {
+    return gBooks.find(book => bookId === book.id)
+}
 
-function updateBook() { }
+function updateBook(bookId, newPrice) {
+    const book = gBooks.find(book => book.id === bookId)
+    book.price = newPrice
+
+    _saveBooksToStorage()
+    return book
+}
 
 function setBookFilter(filterBy) { }
 

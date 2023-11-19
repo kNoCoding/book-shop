@@ -24,7 +24,7 @@ function renderBooks() {
                     <td>${book.price}</td>
                     <td>
                         <button class="read">Read</button>
-                        <button class="update">Update</button>
+                        <button class="update" onclick ="onUpdateBook('${book.id}')">Update</button>
                         <button class="delete" onclick="onRemoveBook('${book.id}')">Delete</button>
                     </td>
                 </tr>
@@ -42,19 +42,41 @@ function onRemoveBook(bookId) {
     removeBook(bookId)
     console.log('book removed!')
     renderBooks()
-    //consider adding flashMsg(``) notifying the user the book has been removed
+
+    flashMsg(`Book removed`)
 }
 
 function onAddBook() {
     var title = prompt('Enter book title')
-    if(!title) return
+    if (!title) return
     var price = +prompt('Enter book price')
-    if(!price) return
+    if (!price) return
 
     const book = addBook(title, price) // need this const for later to add the flashMsg
     renderBooks()
- }
 
-function onUpdateBook(bookId) { }
+    flashMsg(`New book created!\nTitle:${book.title}\nPrice:${book.price}`)
+
+}
+
+function onUpdateBook(bookId) {
+    const book = getBookById(bookId)
+
+    var newPrice = +prompt('Enter book price', book.price)
+    if (!newPrice || book.price === newPrice) return
+
+    const updatedBook = updateBook(bookId, newPrice)
+    renderBooks()
+    
+    flashMsg(`Price updated to: ${updatedBook.price}`)
+}
 
 function onReadBook(bookId) { }
+
+function flashMsg(msg) {
+    const elUserMsg = document.querySelector('.user-msg')
+
+    elUserMsg.innerText = msg
+    elUserMsg.classList.add('open')
+    setTimeout(() => elUserMsg.classList.remove('open'), 3000)
+}

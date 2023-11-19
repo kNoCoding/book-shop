@@ -6,23 +6,17 @@ Building CRUDL with MVC
 TODO:  
 
    
- 
+ more is coming..
   
+
+
+IN PROGRESS:
    
-able 
-    8. When user removes or saves a book, show success messages  
+     
     9. Use a modal to show all the details of a selected book  
     a. When read is clicked, show the modal with details of the selected 
     book. 
-
-IN PROGRESS:
-  
-    7. Support updating a book: 
-    a. When clicked, call the function: 
-    onUpdateBook (bookId) that will prompt for the book new price and 
-    call the service's function updateBook(bookId, bookPrice). 
-    Then Call the renderBooks() to redraw the t
-
+   
  
 DONE:
 
@@ -44,3 +38,11 @@ DONE:
         the details from the user: name and price, then will call a function 
         addBook(name, price) that pushes a new book into the gBooks array. 
         b. Call the renderBooks() to redraw the table 
+
+    7. Support updating a book: 
+        a. When clicked, call the function: 
+        onUpdateBook (bookId) that will prompt for the book new price and 
+        call the service's function updateBook(bookId, bookPrice). 
+        Then Call the renderBooks() to redraw the table 
+
+    8. When user removes or saves a book, show success messages  
