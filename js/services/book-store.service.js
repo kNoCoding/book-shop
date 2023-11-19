@@ -4,8 +4,10 @@ const STORAGE_KEY = 'bookDB'
 
 var gBooks
 
+_createBooks()
+
 function getBooks() {
-    var books = gBooks // add filtering here in the near future
+    var books = gBooks
     return books
 }
 
@@ -25,11 +27,12 @@ function setBookSort(sortBy) { }
 
 // private functions
 
-function _createBook(title, price) {
+function _createBook(title = 'Nice Book', price = 50) {
     return {
         id: makeId(4),
         title,
         price,
+        // imgUrl, // put a default there in the near future and add as parameter to the function
     }
 }
 

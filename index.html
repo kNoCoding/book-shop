@@ -8,56 +8,14 @@
     <title>Book Shop</title>
 </head>
 
-<body>
+<body onload="onInit()">
     <header>
         <h1>Welcome to my bookshop</h1>
     </header>
 
     <section><button class="create-new-book-btn">Create new book</button></section>
 
-    <main>
-        <table>
-            <thead>
-                <td>Id</td>
-                <td>Title</td>
-                <td>Price</td>
-                <td>Actions</td>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Learning Laravel</td>
-                    <td>18.90</td>
-                    <td>
-                        <button class="read">Read</button>
-                        <button class="update">Update</button>
-                        <button class="delete">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Learning Laravel</td>
-                    <td>18.90</td>
-                    <td>
-                        <button class="read">Read</button>
-                        <button class="update">Update</button>
-                        <button class="delete">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Learning Laravel</td>
-                    <td>18.90</td>
-                    <td>
-                        <button class="read">Read</button>
-                        <button class="update">Update</button>
-                        <button class="delete">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-
+    <main class="books-container"></main>
 
 
     <script src="js/services/util.service.js"></script>

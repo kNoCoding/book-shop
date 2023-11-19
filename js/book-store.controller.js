@@ -1,15 +1,46 @@
 'use strict'
 
-function onInit(){}
-
-function renderBooks(){
-    var books = getBooks()
+function onInit() {
+    renderBooks()
 }
 
-function onRemoveBook(bookId){}
+function renderBooks() {
+    var books = getBooks()
+    var strHtml = `
+        <table>
+            <thead>
+                <td>Id</td>
+                <td>Title</td>
+                <td>Price</td>
+                <td>Actions</td>
+            </thead>
+            <tbody>
+    `
+    var tbodyHtml = books.map(book => `
+                <tr>
+                    <td>${book.id}</td>
+                    <td>${book.title}</td>
+                    <td>${book.price}</td>
+                    <td>
+                        <button class="read">Read</button>
+                        <button class="update">Update</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+    `).join('')
+    strHtml += tbodyHtml
+    strHtml += `
+            </tbody>
+        </table>
+    `
 
-function onAddBook(){}
+    document.querySelector('.books-container').innerHTML = strHtml
+}
 
-function onUpdateBook(bookId){}
+function onRemoveBook(bookId) { }
 
-function onReadBook(bookId){}
+function onAddBook() { }
+
+function onUpdateBook(bookId) { }
+
+function onReadBook(bookId) { }
