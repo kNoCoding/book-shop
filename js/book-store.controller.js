@@ -24,7 +24,7 @@ function renderBooks() {
                     <td>
                         <button class="read">Read</button>
                         <button class="update">Update</button>
-                        <button class="delete">Delete</button>
+                        <button class="delete" onclick="onRemoveBook('${book.id}')">Delete</button>
                     </td>
                 </tr>
     `).join('')
@@ -37,7 +37,12 @@ function renderBooks() {
     document.querySelector('.books-container').innerHTML = strHtml
 }
 
-function onRemoveBook(bookId) { }
+function onRemoveBook(bookId) {
+    removeBook(bookId)
+    console.log('book removed!')
+    renderBooks()
+    //consider adding flashMsg(``) notifying the user the book has been removed
+}
 
 function onAddBook() { }
 

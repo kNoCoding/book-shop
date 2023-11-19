@@ -6,18 +6,10 @@ Building CRUDL with MVC
 TODO:  
 
    
-    2. Code the function renderBooks() that will render the books with table rows 
-    <tr> and <th> and <td> 
-    3. Use a book-service to manage the books (gBooks) 
-    a. Use the localStorage to load and store books. 
-    4. Now, let's handle CRUDL (Create, Read, Update, Delete and List) 
-    a. Add an Actions column to the table  
-    5. Delete - when the button Delete is clicked call onRemoveBook that will use 
-    the service's function removeBook(bookId)) 
-    6. Support adding a new book: 
-    a. When clicked, call the function onAddBook() that will read (prompt) 
-    the details from the user: name and price, then will call a function 
-    addBook(name, price) that pushes a new book into the gBooks array.  
+ 
+  
+   
+  
     b. Call the renderBooks() to redraw the table 
     7. Support updating a book: 
     a. When clicked, call the function: 
@@ -31,7 +23,22 @@ TODO:
 
 IN PROGRESS:
 
- 1. Setup a basic HTML with <table> <thead> and <tbody> 
-
+   6. Support adding a new book: 
+    a. When clicked, call the function onAddBook() that will read (prompt) 
+    the details from the user: name and price, then will call a function 
+    addBook(name, price) that pushes a new book into the gBooks array. 
+ 
 DONE:
 
+    1. Setup a basic HTML with <table> <thead> and <tbody> 
+    
+    2. Code the function renderBooks() that will render the books with table rows 
+    <tr> and <th> and <td> 
+
+    3. Use a book-service to manage the books (gBooks) 
+        a. Use the localStorage to load and store books. 
+    
+    4. Now, let's handle CRUDL (Create, Read, Update, Delete and List) 
+        a. Add an Actions column to the table 
+
+    5. Delete - when the button Delete is clicked call onRemoveBook that will use the service's function removeBook(bookId)) 

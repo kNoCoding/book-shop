@@ -11,7 +11,12 @@ function getBooks() {
     return books
 }
 
-function removeBook() { }
+function removeBook(bookId) {
+    const bookIdx = gBooks.findIndex(book => bookId === book.id)
+    gBooks.splice(bookIdx, 1)
+
+    _saveBooksToStorage()
+}
 
 function addBook() { }
 
