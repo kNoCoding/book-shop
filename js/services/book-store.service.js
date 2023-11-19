@@ -18,7 +18,13 @@ function removeBook(bookId) {
     _saveBooksToStorage()
 }
 
-function addBook() { }
+function addBook(title, price) {
+    const book = _createBook(title, price)
+    gBooks.unshift(book)
+
+    _saveBooksToStorage()
+    return book
+}
 
 function getBookById() { }
 

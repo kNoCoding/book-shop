@@ -7,6 +7,7 @@ function onInit() {
 function renderBooks() {
     var books = getBooks()
     var strHtml = `
+    <section><button class="create-new-book-btn" onclick="onAddBook()">Create new book</button></section>
         <table>
             <thead>
                 <td>Id</td>
@@ -44,7 +45,15 @@ function onRemoveBook(bookId) {
     //consider adding flashMsg(``) notifying the user the book has been removed
 }
 
-function onAddBook() { }
+function onAddBook() {
+    var title = prompt('Enter book title')
+    if(!title) return
+    var price = +prompt('Enter book price')
+    if(!price) return
+
+    const book = addBook(title, price) // need this const for later to add the flashMsg
+    renderBooks()
+ }
 
 function onUpdateBook(bookId) { }
 
