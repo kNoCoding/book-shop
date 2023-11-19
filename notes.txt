@@ -1,0 +1,37 @@
+Building CRUDL with MVC 
+    Books Shop (code  name: book-shop) 
+    Code an app that shows a list of books: id, name, price, imgUrl.  
+    We will allow the user – a shop owner – to manage the books. 
+
+TODO:  
+
+   
+    2. Code the function renderBooks() that will render the books with table rows 
+    <tr> and <th> and <td> 
+    3. Use a book-service to manage the books (gBooks) 
+    a. Use the localStorage to load and store books. 
+    4. Now, let's handle CRUDL (Create, Read, Update, Delete and List) 
+    a. Add an Actions column to the table  
+    5. Delete - when the button Delete is clicked call onRemoveBook that will use 
+    the service's function removeBook(bookId)) 
+    6. Support adding a new book: 
+    a. When clicked, call the function onAddBook() that will read (prompt) 
+    the details from the user: name and price, then will call a function 
+    addBook(name, price) that pushes a new book into the gBooks array.  
+    b. Call the renderBooks() to redraw the table 
+    7. Support updating a book: 
+    a. When clicked, call the function: 
+    onUpdateBook (bookId) that will prompt for the book new price and 
+    call the service's function updateBook(bookId, bookPrice). 
+    Then Call the renderBooks() to redraw the table 
+    8. When user removes or saves a book, show success messages  
+    9. Use a modal to show all the details of a selected book  
+    a. When read is clicked, show the modal with details of the selected 
+    book. 
+
+IN PROGRESS:
+
+ 1. Setup a basic HTML with <table> <thead> and <tbody> 
+
+DONE:
+

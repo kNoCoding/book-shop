@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+table,
+td {
+    border: 2px solid lightslategray;
+    border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+td {
+    padding: .5em;
+}
+
+button {
+    padding: .5em;
+    cursor: pointer;
+}
+
+.read {
+    background-color: blue;
+    color: white;
+}
+
+.update {
+    background-color: orange;
+    color: white;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+}
+
+.create-new-book-btn{
+    border: none;
+    background-color:transparent;
+    color: rgb(43, 168, 240);
+}
