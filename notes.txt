@@ -5,17 +5,48 @@ Building CRUDL with MVC
 
 TODO:  
 
-   
- more is coming..
-  
+
+Bookmark-ability 
+    11.  Filtering should be reflected in query-params 
+
+Sorting 
+    12.  Allow sorting the list: by price, by name 
+
+Paging 
+    13.  Support paging through the books with Next and Prev buttons  
+    
+    14.  Update the disabled property of the button appropriately 
+
+Grouping 
+    15.  At the footer, show in a small table how many books there in the shop are from each category: expensive, normal, cheap 
+ 
+Book rating 
+    16.  Add a rating feature: 
+        a. The rate should be a number between 0 (UNKNOW) and 10 (BEST) 
+        b. Add a rate property for the book (default: 0) 
+        c. In the Book-Details modal, show the current rate of the book and allow the user to change it by clicking the + / - buttons: 
+ 
+ 
+More Bonuses 
+    17.  Allow the user to switch between two presentation modes (cards/table) 
+        a. Remember the user preference in localStorage key: favLayout: table/cards 
+    
+    18.  Read the information from the user using an <input> instead of prompt 
+    
+    19.  Make the header of the table clickable to support sorting by name or price 
+
+    20.  Add bookmark-ability also to the opened modal state (so when refreshing when the 
+    book-details modal is open, it re-opens when page reloaded) 
+
+    21.  Add more advanced paging: 
+               
 
 
 IN PROGRESS:
    
-     
-    9. Use a modal to show all the details of a selected book  
-    a. When read is clicked, show the modal with details of the selected 
-    book. 
+    Filtering 
+    10.  Support filtering the books by minRate and by using a search box 
+  
    
  
 DONE:
@@ -46,3 +77,6 @@ DONE:
         Then Call the renderBooks() to redraw the table 
 
     8. When user removes or saves a book, show success messages  
+
+    9. Use a modal to show all the details of a selected book  
+        a. When read is clicked, show the modal with details of the selected book. 

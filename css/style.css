@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin: 0 auto;
+    align-items: center;
+}
+
 table,
 td {
     border: 2px solid lightslategray;
@@ -21,6 +29,10 @@ button {
     cursor: pointer;
 }
 
+img {
+    width: 70px;
+}
+
 .read {
     background-color: blue;
     color: white;
@@ -36,23 +48,50 @@ button {
     color: white;
 }
 
-.create-new-book-btn{
+.create-new-book-btn {
     border: none;
-    background-color:transparent;
+    background-color: transparent;
     color: rgb(43, 168, 240);
 }
 
 .user-msg {
-	position: fixed;
-	bottom: -100px;
-	right: 10px;
+    position: fixed;
+    bottom: -100px;
+    right: 10px;
 
-	background-color: #111;
+    background-color: #111;
     color: white;
-	padding: 10px;
-    transition: bottom 0.5s;
+    padding: 10px;
+    transition: bottom 1s;
 }
 
 .user-msg.open {
-	bottom: 10px;
+    bottom: 10px;
+}
+
+.modal {
+    position: absolute;
+    top: -300px;
+
+
+    width: 300px;
+    padding: 10px;
+    background-color: #111;
+
+    text-align: center;
+    transition: top 1s;
+
+    color: white;
+}
+
+.modal.open {
+    top: 20vh;
+}
+
+.modal-button {
+    border: 2px solid black;
+    color: white;
+    background-color: red;
+    padding: .5em;
+    cursor: pointer;
 }

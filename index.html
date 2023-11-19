@@ -15,7 +15,18 @@
 
     <main class="books-container"></main>
 
-	<div class="user-msg"></div>
+    <div class="modal">
+        <p>
+            Book id: <span class="book-id"></span><br>
+            Book title: <span class="book-title"></span><br>
+            Book price: <span class="book-price"></span><br>
+        </p>
+
+        Book image: <br><img src="" alt="" onerror="this.src='img/default.jpg'"><br>
+        <button class="modal-button" onclick="onCloseModal()">Close</button>
+    </div>
+
+    <div class="user-msg"></div>
 
 
     <script src="js/services/util.service.js"></script>
